@@ -2,20 +2,18 @@
 
 ## About Me
 
-I'm a biomedical engineering senior [Neural Control of Movement Laboratory](https://scholar.google.com/citations?user=DV8YG04AAAAJ&hl=en) in Arizona.
+I'm a biomedical engineering senior [Neural Control of Movement Laboratory]() in Arizona.
 
 <!-- Add your bio or description here -->
 
 ### Contact
 
-- [Email](mailto:your.email@example.com)
+- [Email](mailto:wnoll@asu.edu)
 - [CV](data/YourCV.pdf)
 - [Bio](data/YourBio.txt)
-- [Scholar](https://scholar.google.com/)
-- [Threads](https://www.threads.net/)
-- [Bluesky](https://bsky.app/)
-- [Twitter](https://twitter.com/your_twitter_handle)
-- [Github](https://github.com/your_username)
+- [Scholar](https://scholar.google.com/citations?user=DV8YG04AAAAJ&hl=en)
+- [Twitter](https://twitter.com/willnoll3)
+- [Github](https://github.com/WilliamNoll)
 
 ## Profile Picture
 
