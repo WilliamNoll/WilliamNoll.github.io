@@ -2,7 +2,7 @@
 
 ## About Me
 
-I'm a biomedical engineering senior [Neural Control of Movement Laboratory](https://ai.google/research](https://scholar.google.com/citations?user=DV8YG04AAAAJ&hl=en) in Arizona.
+I'm a biomedical engineering senior [Neural Control of Movement Laboratory](https://scholar.google.com/citations?user=DV8YG04AAAAJ&hl=en) in Arizona.
 
 <!-- Add your bio or description here -->
 
