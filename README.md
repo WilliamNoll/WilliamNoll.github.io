@@ -17,7 +17,7 @@ I'm a biomedical engineering senior [Neural Control of Movement Laboratory]() in
 
 ## Profile Picture
 
-![Profile Picture](images/your_profile_picture.jpg)
+![Profile Picture](images/ProfessionalHeadshot.png)
 
 ## Publications
 <!-- Add more sections for your research, projects, etc. -->
