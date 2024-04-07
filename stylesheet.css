@@ -133,3 +133,15 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.outer-list {
+  list-style-type: circle; /* Use filled circle as the outer bullet point */
+  padding-left: 20px; /* Add indentation for better readability */
+  margin-bottom: 10px;
+}
+
+.inner-list {
+  list-style-type: square; /* Use square as the inner bullet point */
+  padding-left: 20px; /* Add indentation for better readability */
+  margin-bottom: 10px;
+}
