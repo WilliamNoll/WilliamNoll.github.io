@@ -159,6 +159,6 @@ papertitle {
 
 .research-image {
   width: 100%;
-  height: auto;
-  max-width: 300px; /* Adjust this value to make the image larger */
+  height: 200px;
+  max-width: 200px; /* Adjust this value to make the image larger */
 }
