@@ -152,3 +152,13 @@ papertitle {
   font-size: 14px;
   font-weight: 700
 }
+
+.one {
+  width: 100%;
+}
+
+.research-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Adjust this value to make the image larger */
+}
