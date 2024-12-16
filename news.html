@@ -41,12 +41,18 @@
       margin-right: 20px;
     }
 
-    .career-highlights ul {
-      padding-left: 20px;
+    .news-section {
+      margin-top: 40px;
     }
 
-    .news-section, .publications-section {
-      margin-top: 40px;
+    .date-bubble {
+      display: inline-block;
+      background-color: #28a745;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-weight: bold;
+      font-size: 0.9em;
     }
 
     .footer {
@@ -72,6 +78,7 @@
           <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -83,67 +90,29 @@
     <h1>Welcome to Will Noll's Documentation of Attempting to Change the World</h1>
   </div>
 
-  <!-- About Me Section -->
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-4">
-        <img src="images/ProfessionalHeadshot_GradPhotosCroppedv2.jpg" alt="William Noll" class="profile-photo img-fluid">
-      </div>
-      <div class="col-md-8">
-        <h2>About Me</h2>
-        <p>I’m a PhD student in Computational Neuroscience at Carnegie Mellon University, advised by Drs. Byron Yu, Steve Chase, and Aaron Batista. I'm interested in brain-computer interfaces (BCIs), designing machine learning tools to analyze neural popuation activity, and neural engineering. My PhD work aims to leverage BCIs as a research tool to learn more how the brain controls movement. In the longterm, I plan to use BCIs for clinical applications to help people with tetraplegia, spinal cord injury, and blindness.</p>
-        <p>I am always excited on working on impactful projects. Send me an email if you're interested in collaboration!</p>
-      
-      </div>
-    </div>
-  </section>
-
   <!-- News Section -->
   <section class="news-section container">
-    <h2>News</h2>
+    <h2>Latest News</h2>
     <table class="table">
       <tbody>
         <tr>
-          <td>April 2024</td>
-          <td>Awarded the NSF Graduate Research Fellowship.</td>
+          <td><span class="date-bubble">April 2024</span></td>
+          <td>Awarded the NSF Graduate Research Fellowship (fully funded PhD for 3 years).</td>
         </tr>
         <tr>
-          <td>August 2024</td>
+          <td><span class="date-bubble">August 2024</span></td>
           <td>Started my PhD at Carnegie Mellon University.</td>
         </tr>
         <tr>
-          <td>May 2024</td>
+          <td><span class="date-bubble">May 2024</span></td>
           <td>Published paper on dexterous manipulation in <em>Journal of Neurophysiology</em>.</td>
+        </tr>
+        <tr>
+          <td><span class="date-bubble">February 2024</span></td>
+          <td>Presented research on BCIs at Neural Engineering Conference.</td>
         </tr>
       </tbody>
     </table>
-  </section>
-
-  <!-- Publications Section -->
-  <section class="publications-section container">
-    <h2>Selected Publications</h2>
-    <div class="row">
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="images/papers/Noll_Santello_PredictableMGFD_2024.png" class="card-img-top" alt="Publication Image">
-          <div class="card-body">
-            <h5 class="card-title">Dexterous Manipulation: Differential Sensitivity of Forces</h5>
-            <p class="card-text"><strong>William Noll</strong>, Yen-Hsun Wu, and Marco Santello.<br><em>Journal of Neurophysiology</em>, 2024.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="images/papers/Noll_Lee_SmartphonePaperMethods_2024.jpg" class="card-img-top" alt="Publication Image">
-          <div class="card-body">
-            <h5 class="card-title">Modern Smartphone Usage and Postural Balance</h5>
-            <p class="card-text"><strong>William Noll</strong>, Vu Phan, and Hyunglae Lee.<br><em>Gait and Posture</em>, 2024.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- Footer -->
