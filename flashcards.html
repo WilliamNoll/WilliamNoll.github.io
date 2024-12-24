@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="William Noll">
+  <title>Chaldean Flashcards</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .flashcard {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .flashcard button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chaldean Flashcards</h1>
+    <div class="flashcard">
+      <button id="mode-button">Switch to English-to-Syriac</button>
+      <div id="question" style="font-size: 30px; margin: 20px 0;"></div>
+      <input type="text" id="answer-input" style="font-size: 18px; padding: 5px;">
+      <div>
+        <button id="answer-button">Answer</button>
+        <button id="next-button">Next</button>
+        <button id="hint-button">Hint</button>
+        <button id="pronounce-button">Pronounce</button>
+      </div>
+      <div id="hint" style="margin: 10px 0;"></div>
+      <div id="result" style="margin: 10px 0;"></div>
+    </div>
+  </div>
+  <script src="flashcards.js"></script>
+</body>
+</html>

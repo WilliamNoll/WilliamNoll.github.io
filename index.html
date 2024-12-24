@@ -9,6 +9,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -35,18 +36,36 @@
       padding: 20px 0;
     }
 
-    .profile-photo {
-      max-width: 200px;
-      border-radius: 50%;
-      margin-right: 20px;
-    }
-
-    .career-highlights ul {
-      padding-left: 20px;
-    }
-
-    .news-section, .publications-section {
+    .news-section h2, .publications-section h2, .contact-section h2 {
       margin-top: 40px;
+    }
+
+    .news-date {
+      background-color: #90ee90; /* Lighter green bubble */
+      color: black; /* Change font color to black */
+      font-weight: bold;
+      border-radius: 15px; /* Oval shape */
+      padding: 5px 15px;
+      text-align: center;
+      display: inline-block;
+      margin-right: 10px;
+      width: 120px; /* Fixed width for consistency */
+      font-size: 0.85em; /* Decrease font size slightly */
+    }
+
+    .news-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .news-item p {
+      margin: 0; /* Remove margin for better alignment */
+    }
+
+    .publication-title {
+      font-weight: bold;
+      color: #333333;
     }
 
     .footer {
@@ -55,9 +74,41 @@
       padding: 20px 0;
       margin-top: 40px;
     }
+
+    .abstract {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .contact-icons a {
+      color: #336699;
+      margin-right: 15px;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .contact-icons .ai-google-scholar {
+      font-size: 1.7rem; /* Slightly larger for Google Scholar icon */
+    }
+
+    .publication-img {
+      max-width: 30%; /* Approximately 1/3 of the screen width */
+      margin-right: 20px;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .publication-img {
+        max-width: 100%; /* Adjust for smaller screens */
+        margin-bottom: 15px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
@@ -72,6 +123,7 @@
           <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -87,63 +139,79 @@
   <section class="container mt-5">
     <div class="row">
       <div class="col-md-4">
-        <img src="images/ProfessionalHeadshot_GradPhotosCroppedv2.jpg" alt="William Noll" class="profile-photo img-fluid">
+        <img src="images/ProfessionalHeadshot_GradPhotosCroppedv2.jpg" alt="William Noll" class="profile-photo img-fluid rounded-circle">
       </div>
       <div class="col-md-8">
-        <h2>About Me</h2>
+        <h2>William Noll</h2>
         <p>I’m a PhD student in Computational Neuroscience at Carnegie Mellon University, advised by Drs. Byron Yu, Steve Chase, and Aaron Batista. I'm interested in brain-computer interfaces (BCIs), designing machine learning tools to analyze neural popuation activity, and neural engineering. My PhD work aims to leverage BCIs as a research tool to learn more how the brain controls movement. In the longterm, I plan to use BCIs for clinical applications to help people with tetraplegia, spinal cord injury, and blindness.</p>
         <p>I am always excited on working on impactful projects. Send me an email if you're interested in collaboration!</p>
-      
       </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section class="contact-section container text-center">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/yourprofile" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://scholar.google.com/citations?user=yourID" target="_blank" title="Google Scholar">
+        <i class="ai ai-google-scholar"></i> Google Scholar
+      </a>
+      <a href="https://orcid.org/yourID" target="_blank" title="ORCID">
+        <i class="fab fa-orcid"></i> ORCID
+      </a>
     </div>
   </section>
 
   <!-- News Section -->
   <section class="news-section container">
-    <h2>News</h2>
-    <table class="table">
-      <tbody>
-        <tr>
-          <td>April 2024</td>
-          <td>Awarded the NSF Graduate Research Fellowship.</td>
-        </tr>
-        <tr>
-          <td>August 2024</td>
-          <td>Started my PhD at Carnegie Mellon University.</td>
-        </tr>
-        <tr>
-          <td>May 2024</td>
-          <td>Published paper on dexterous manipulation in <em>Journal of Neurophysiology</em>.</td>
-        </tr>
-      </tbody>
-    </table>
+    <h2>Recent News</h2>
+    <div id="news-container"></div>
+    <a href="news.html" class="btn btn-link">see all news</a>
   </section>
 
   <!-- Publications Section -->
   <section class="publications-section container">
     <h2>Selected Publications</h2>
-    <div class="row">
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="images/papers/Noll_Santello_PredictableMGFD_2024.png" class="card-img-top" alt="Publication Image">
-          <div class="card-body">
-            <h5 class="card-title">Dexterous Manipulation: Differential Sensitivity of Forces</h5>
-            <p class="card-text"><strong>William Noll</strong>, Yen-Hsun Wu, and Marco Santello.<br><em>Journal of Neurophysiology</em>, 2024.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+    <ul class="list-unstyled">
+      <!-- Dexterous Manipulation Paper -->
+      <li class="d-flex mb-4">
+        <img src="images/papers/Noll_Santello_PredictableMGFD_2024.png" alt="Publication" class="publication-img">
+        <div>
+          <div class="publication-title">Dexterous manipulation: differential sensitivity of manipulation and grasp forces to task requirements</div>
+          <div><em>William Noll</em>, Yen-Hsun Wu, Marco Santello</div>
+          <div><em>Journal of Neurophysiology</em>, 2024</div>
+          <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract1')">Abstract</button>
+          <a href="https://journals.physiology.org/doi/full/10.1152/jn.00034.2024" class="btn btn-sm btn-outline-primary" target="_blank">Read More</a>
+          <div id="abstract1" class="abstract">
+            This study explores the sensitivity of manipulation and grasp forces to task constraints in dexterous manipulation.
           </div>
         </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="images/papers/Noll_Lee_SmartphonePaperMethods_2024.jpg" class="card-img-top" alt="Publication Image">
-          <div class="card-body">
-            <h5 class="card-title">Modern Smartphone Usage and Postural Balance</h5>
-            <p class="card-text"><strong>William Noll</strong>, Vu Phan, and Hyunglae Lee.<br><em>Gait and Posture</em>, 2024.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+      </li>
+
+      <!-- Gait and Posture Paper -->
+      <li class="d-flex mb-4">
+        <img src="images/papers/Noll_Lee_SmartphonePaperMethods_2024.jpg" alt="Publication" class="publication-img">
+        <div>
+          <div class="publication-title">Modern smartphone usage can negatively impact postural balance while standing on dynamically challenging grounds</div>
+          <div><em>William Noll</em>, Vu Phan, Hyunglae Lee</div>
+          <div><em>Gait and Posture</em>, 2024</div>
+          <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract2')">Abstract</button>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0966636223014650" class="btn btn-sm btn-outline-primary" target="_blank">Read More</a>
+          <div id="abstract2" class="abstract">
+            This research investigates how smartphone usage impacts postural stability on unstable surfaces.
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </section>
 
   <!-- Footer -->
@@ -153,5 +221,34 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleAbstract(id) {
+      var abstract = document.getElementById(id);
+      abstract.style.display = (abstract.style.display === "block") ? "none" : "block";
+    }
+
+    fetch('news.html')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const newsItems = doc.querySelectorAll('.news-item');
+        const newsContainer = document.getElementById('news-container');
+        newsItems.forEach((item, index) => {
+          if (index < 4) {
+            const newsItem = document.createElement('div');
+            newsItem.classList.add('news-item');
+            const dateBubble = document.createElement('span');
+            dateBubble.classList.add('news-date');
+            dateBubble.innerHTML = item.querySelector('.date-bubble').innerHTML;
+            const newsText = document.createElement('p');
+            newsText.innerHTML = item.querySelector('p').innerHTML;
+            newsItem.appendChild(dateBubble);
+            newsItem.appendChild(newsText);
+            newsContainer.appendChild(newsItem);
+          }
+        });
+      });
+  </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="William Noll">
-  <title>William Noll</title>
+  <title>News - William Noll</title>
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,24 +35,31 @@
       padding: 20px 0;
     }
 
-    .profile-photo {
-      max-width: 200px;
-      border-radius: 50%;
-      margin-right: 20px;
-    }
-
     .news-section {
       margin-top: 40px;
     }
 
     .date-bubble {
       display: inline-block;
-      background-color: #28a745;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 15px;
+      background-color: #90ee90; /* Lighter green bubble */
+      color: black; /* Change font color to black */
+      padding: 5px 15px;
+      border-radius: 15px; /* Oval shape */
       font-weight: bold;
-      font-size: 0.9em;
+      font-size: 0.85em; /* Decrease font size slightly */
+      text-align: center;
+      margin-right: 10px;
+      width: 120px; /* Fixed width for consistency */
+    }
+
+    .news-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .news-item p {
+      margin: 0; /* Remove margin for better alignment */
     }
 
     .footer {
@@ -92,27 +99,23 @@
 
   <!-- News Section -->
   <section class="news-section container">
-    <h2>Latest News</h2>
-    <table class="table">
-      <tbody>
-        <tr>
-          <td><span class="date-bubble">April 2024</span></td>
-          <td>Awarded the NSF Graduate Research Fellowship (fully funded PhD for 3 years).</td>
-        </tr>
-        <tr>
-          <td><span class="date-bubble">August 2024</span></td>
-          <td>Started my PhD at Carnegie Mellon University.</td>
-        </tr>
-        <tr>
-          <td><span class="date-bubble">May 2024</span></td>
-          <td>Published paper on dexterous manipulation in <em>Journal of Neurophysiology</em>.</td>
-        </tr>
-        <tr>
-          <td><span class="date-bubble">February 2024</span></td>
-          <td>Presented research on BCIs at Neural Engineering Conference.</td>
-        </tr>
-      </tbody>
-    </table>
+    <h2>News</h2>
+    <div class="news-item">
+      <span class="date-bubble">Apr 01, 2024</span>
+      <p>Awarded the NSF Graduate Research Fellowship (fully funded PhD for 3 years).</p>
+    </div>
+    <div class="news-item">
+      <span class="date-bubble">Aug 15, 2024</span>
+      <p>Started my PhD at Carnegie Mellon University.</p>
+    </div>
+    <div class="news-item">
+      <span class="date-bubble">May 20, 2024</span>
+      <p>Published paper on dexterous manipulation in <em>Journal of Neurophysiology</em>.</p>
+    </div>
+    <div class="news-item">
+      <span class="date-bubble">Feb 10, 2024</span>
+      <p>Presented research on BCIs at Neural Engineering Conference.</p>
+    </div>
   </section>
 
   <!-- Footer -->
