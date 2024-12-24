@@ -81,14 +81,14 @@ function pronounce() {
 
 function doKey(event) {
   if (currentMode === "english_to_syriac") {
-    let key = event.key;
+    let key = event.key.toLowerCase(); // Convert key to lowercase to match the keyMap
     if (event.shiftKey) {
       key = `Shift-${key}`;
     } else if (event.altKey) {
       key = `Alt-${key}`;
     }
     const char = keyMap[key];
-    if (char) {
+    if (char !== undefined) { // Check if the character is defined in the keyMap
       event.preventDefault();
       const input = document.getElementById('answer-input');
       const start = input.selectionStart;
