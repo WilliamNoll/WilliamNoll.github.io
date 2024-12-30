@@ -41,12 +41,33 @@
     section {
       padding: 50px 20px;
     }
-    h1 {
+    h1, h2 {
       text-align: center;
     }
     .content {
       max-width: 800px;
       margin: 0 auto;
+    }
+    .content ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .content ul li {
+      margin-bottom: 20px;
+    }
+    .content ul li a {
+      color: #336699;
+      text-decoration: none;
+    }
+    .content ul li a:hover {
+      text-decoration: underline;
+    }
+    .center-text {
+      text-align: center;
+    }
+    .projects-in-progress ul {
+      list-style-type: disc; /* Use disc bullets for this specific list */
+      padding-left: 20px; /* Add indentation for better readability */
     }
   </style>
 </head>
@@ -67,10 +88,22 @@
   <section>
     <h1>Projects</h1>
     <div class="content">
-      <p><strong>BCI Algorithm Development:</strong> Improving decoding techniques for real-time motor intention recognition using neural data.</p>
-      <p><strong>Neo-Aramaic Flashcards:</strong> A Python-based flashcard system for language learning, integrating spaced repetition algorithms.</p>
-      <p><strong>Neural Data Visualizations:</strong> Developing interactive 3D visualizations to explore neural activity trajectories during motor tasks.</p>
-      <p><strong>Chaldean Flashcards:</strong> <a href="flashcards.html">Try the Chaldean Flashcards</a></p>
+      <ul>
+        <li><strong>Neo-Aramaic/Chaldean Python Learning Tool:</strong> <a href="https://github.com/WilliamNoll">GitHub</a></li>
+        <li><strong>Chaldean Flashcards:</strong> Here's a small sample of the functionality of the tool. I'm working on converting my Python tool into a JavaScript app that can be used directly on this website. Stay tuned. <a href="#flashcards-sample">Demo</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects in Progress Section -->
+  <section class="projects-in-progress">
+    <h2>Projects in Progress</h2>
+    <div class="content">
+      <p class="center-text">Projects I'm excited about and will be released in the coming months:</p>
+      <ul>
+        <li><strong>Open-source neural population analyses techniques in Python and MATLAB (decoding, encoding, classification, dimensionality reduction):</strong> IN PROGRESS, STAY TUNED FOR ANY UPDATES.</li>
+        <li><strong>Chaldean-to-English translator:</strong> STAY TUNED, IN PROGRESS.</li>
+      </ul>
     </div>
   </section>
 </body>
