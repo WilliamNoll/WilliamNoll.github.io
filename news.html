@@ -50,6 +50,7 @@
       text-align: center;
       margin-right: 10px;
       width: 120px; /* Fixed width for consistency */
+      flex-shrink: 0; /* Prevent shrinking */
     }
 
     .news-item {
@@ -60,6 +61,7 @@
 
     .news-item p {
       margin: 0; /* Remove margin for better alignment */
+      flex-grow: 1; /* Allow text to grow */
     }
 
     .footer {
@@ -102,20 +104,28 @@
   <section class="news-section container">
     <h2>News</h2>
     <div class="news-item">
-      <span class="date-bubble">Apr 01, 2024</span>
-      <p>Awarded the NSF Graduate Research Fellowship (fully funded PhD for 3 years).</p>
+      <span class="date-bubble">Oct 2024</span>
+      <p>Presented "Micro-perturbations reveal distinct sensitivity of grasp and manipulation force to sensory feedback" at the 2024 Society for Neuroscience conference</p>
     </div>
     <div class="news-item">
-      <span class="date-bubble">Aug 15, 2024</span>
-      <p>Started my PhD at Carnegie Mellon University.</p>
+      <span class="date-bubble">Aug 2024</span>
+      <p>Started my PhD at Carnegie Mellon University co-advised by Drs. Byron Yu, Aaron Batista, and Steve Chase</p>
     </div>
     <div class="news-item">
-      <span class="date-bubble">May 20, 2024</span>
-      <p>Published paper on dexterous manipulation in <em>Journal of Neurophysiology</em>.</p>
+      <span class="date-bubble">May 2024</span>
+      <p>Awarded the NIH Neural Interfaces Traineeship (fully funded PhD for 2 years)</p>
     </div>
     <div class="news-item">
-      <span class="date-bubble">Feb 10, 2024</span>
-      <p>Presented research on BCIs at Neural Engineering Conference.</p>
+      <span class="date-bubble">May 2024</span>
+      <p>Published "Dexterous manipulation: differential sensitivity of manipulation and grasp forces to task requirements" on dexterous manipulation in <em>Journal of Neurophysiology</em></p>
+    </div>
+    <div class="news-item">
+      <span class="date-bubble">Apr 2024</span>
+      <p>Awarded the NSF Graduate Research Fellowship (fully funded PhD for 3 years)</p>
+    </div>
+    <div class="news-item">
+      <span class="date-bubble">Feb 2024</span>
+      <p>Presented neural representation of grasp and manipulation forces at the first-ever ASU-BNI neural engineering and computational neuroscience conference</p>
     </div>
   </section>
 
