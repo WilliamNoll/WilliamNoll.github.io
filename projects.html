@@ -97,6 +97,11 @@
       max-width: 30%; /* Approximately 1/3 of the screen width */
       margin-right: 20px;
       height: auto;
+      flex-shrink: 0; /* Prevent image from stretching */
+    }
+
+    .d-flex {
+      align-items: flex-start; /* Ensure alignment when text expands */
     }
 
     @media (max-width: 768px) {
@@ -150,11 +155,19 @@
   </div>
 
   <!-- Projects Section -->
-  <section>
+  <section class="mt-5">
     <div class="content">
       <ul>
-        <li><strong>Neo-Aramaic/Chaldean Python Learning Tool:</strong> <a href="https://github.com/WilliamNoll">GitHub</a></li>
-        <li><strong>Chaldean Flashcards:</strong> Here's a small sample of the functionality of the tool. I'm working on converting my Python tool into a JavaScript app that can be used directly on this website. Stay tuned. <a href="#flashcards-sample">Demo</a></li>
+        <li class="d-flex mb-4">
+          <img src="images/chaldeanFlag.png" alt="Chaldean Flag" class="publication-img">
+          <div>
+            <div class="publication-title">Neo-Aramaic/Chaldean Python Learning Tool</div>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract1')">Read More</button>
+            <div id="abstract1" class="abstract">
+              While many people might turn to language apps or enroll in courses to learn a new language, I found myself having to invent my own educational materials from scratch. Determined to close a personal gap, I set out on a journey to learn Chaldean—a language passed down orally with almost no written resources or formal courses available. The Chaldean people originate from ancient Mesopotamia. Many Chaldeans originate from Iraq, with large populations in Michigan, California, and Arizona. Growing up in a Chaldean family and spending most of my childhood with my uncles and grandmother, I have always felt a deep connection to my heritage. However, to look out for me, my family didn’t believe it was important to teach me the language, as they believed I wouldn’t have many opportunities to use it outside of family conversations. As a result, I am only a novice and merely conversational in Chaldean. As I grew older, I became determined to close that gap, even though learning Chaldean presented significant challenges due to the lack of accessible resources. Because the language is largely passed down verbally, no one in my family could read or write it, and formal courses were difficult to find. I realized that to succeed in my goal, I would have to take control of my own learning process and develop my own resources based on my learning style as I continue teach myself. That’s when I decided to merge my technical skills with my language-learning goals. Here, I propose an open-source Chaldean learning tool equipped with flashcards and a tool to practice grammar by generating random gender-matched noun-adjective pairs and functionality for parsing verb conjugation patterns to teach various tenses (testing and verification in progress). This has helped me practice more effectively and brought structure to my learning. With the help of a local Chaldean instructor, I've began to record a pronunciation for each word to assist readers with their speaking. Soon, I plan to release a Chaldean-English translator to help members of my community learn English. <a href="https://github.com/WilliamNoll/learnChaldean">GitHub</a>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
   </section>
@@ -166,9 +179,19 @@
       <p class="center-text">Projects I'm excited about and will be released in the coming months:</p>
       <ul>
         <li><strong>Open-source neural population analyses techniques in Python and MATLAB (decoding, encoding, classification, dimensionality reduction):</strong> IN PROGRESS, STAY TUNED FOR ANY UPDATES.</li>
-        <li><strong>Chaldean-to-English translator:</strong> STAY TUNED, IN PROGRESS.</li>
+        <li><strong>Chaldean-to-English translator using deep learning:</strong> STAY TUNED, IN PROGRESS, DEMO COMING SOON.</li>
       </ul>
     </div>
   </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleAbstract(id) {
+      var abstract = document.getElementById(id);
+      abstract.style.display = (abstract.style.display === "block") ? "none" : "block";
+    }
+
+  </script>
 </body>
 </html>
